@@ -115,14 +115,14 @@
             // ajouterUneVoitureToolStripMenuItem1
             // 
             this.ajouterUneVoitureToolStripMenuItem1.Name = "ajouterUneVoitureToolStripMenuItem1";
-            this.ajouterUneVoitureToolStripMenuItem1.Size = new System.Drawing.Size(192, 22);
-            this.ajouterUneVoitureToolStripMenuItem1.Text = "Ajouter une voiture";
+            this.ajouterUneVoitureToolStripMenuItem1.Size = new System.Drawing.Size(204, 22);
+            this.ajouterUneVoitureToolStripMenuItem1.Text = "Ajouter une personne";
             // 
             // supprimerUneVoitureToolStripMenuItem1
             // 
             this.supprimerUneVoitureToolStripMenuItem1.Name = "supprimerUneVoitureToolStripMenuItem1";
-            this.supprimerUneVoitureToolStripMenuItem1.Size = new System.Drawing.Size(192, 22);
-            this.supprimerUneVoitureToolStripMenuItem1.Text = "Supprimer une voiture";
+            this.supprimerUneVoitureToolStripMenuItem1.Size = new System.Drawing.Size(204, 22);
+            this.supprimerUneVoitureToolStripMenuItem1.Text = "Supprimer une personne";
             // 
             // FAccueil
             // 
