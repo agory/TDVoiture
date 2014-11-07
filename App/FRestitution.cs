@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace App
 {
-    public partial class FAccueil : Form
+    public partial class FRestitution : Form
     {
-        public FAccueil()
+        public FRestitution()
         {
             InitializeComponent();
         }
 
-        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        private void bt_close_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

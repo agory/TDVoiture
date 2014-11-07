@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace App
 {
-    public partial class FAccueil : Form
+    public partial class FAjoutPersonne : Form
     {
-        public FAccueil()
+        public FAjoutPersonne()
         {
             InitializeComponent();
-        }
-
-        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

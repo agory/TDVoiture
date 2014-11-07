@@ -50,10 +50,55 @@
     <Compile Include="FAccueil.Designer.cs">
       <DependentUpon>FAccueil.cs</DependentUpon>
     </Compile>
+    <Compile Include="FAjoutPersonne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAjoutPersonne.Designer.cs">
+      <DependentUpon>FAjoutPersonne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FAjoutVoiture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAjoutVoiture.Designer.cs">
+      <DependentUpon>FAjoutVoiture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLocation.Designer.cs">
+      <DependentUpon>FLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRestitution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRestitution.Designer.cs">
+      <DependentUpon>FRestitution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSuppPersonne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSuppPersonne.Designer.cs">
+      <DependentUpon>FSuppPersonne.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FAccueil.resx">
       <DependentUpon>FAccueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAjoutPersonne.resx">
+      <DependentUpon>FAjoutPersonne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FAjoutVoiture.resx">
+      <DependentUpon>FAjoutVoiture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLocation.resx">
+      <DependentUpon>FLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRestitution.resx">
+      <DependentUpon>FRestitution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSuppPersonne.resx">
+      <DependentUpon>FSuppPersonne.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -76,6 +121,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Metier\Metier.csproj">
+      <Project>{bb637e2e-c7b2-44a1-b852-2334c37cedda}</Project>
+      <Name>Metier</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
