@@ -1,4 +1,4 @@
-﻿namespace presentation
+﻿namespace App
 {
     partial class FAccueil
     {
