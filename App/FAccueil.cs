@@ -17,7 +17,9 @@ namespace App
         public FAccueil()
         {
             InitializeComponent();
-            
+            //NOUGATINE
+
+            InitializeComponent();
         }
 
         private void ajouterUneVoitureToolStripMenuItem1_Click(object sender, EventArgs e)
