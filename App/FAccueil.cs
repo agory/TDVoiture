@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Metier;
 
 namespace App
 {
     public partial class FAccueil : Form
     {
+        private Personne unePersonne;
         public FAccueil()
         {
             InitializeComponent();
@@ -20,6 +22,10 @@ namespace App
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+
+        private void ajouterUneVoitureToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
