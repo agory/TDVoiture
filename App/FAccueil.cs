@@ -16,5 +16,10 @@ namespace App
         {
             InitializeComponent();
         }
+
+        private void ajouterUneVoitureToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
