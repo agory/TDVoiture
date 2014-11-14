@@ -13,9 +13,9 @@ namespace App
 {
     public partial class FToutesLesVoitures : Form
     {
-        private Agence agence;
+        private Agence2 agence;
 
-        public FToutesLesVoitures(Agence agence)
+        public FToutesLesVoitures(Agence2 agence)
         {
             InitializeComponent();
             this.agence = agence;

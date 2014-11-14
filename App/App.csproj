@@ -115,6 +115,9 @@
     <EmbeddedResource Include="FSuppVoiture.resx">
       <DependentUpon>FSuppVoiture.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FToutesLesVoitures.resx">
+      <DependentUpon>FToutesLesVoitures.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

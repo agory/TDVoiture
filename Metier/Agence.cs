@@ -6,22 +6,12 @@ using System.Threading.Tasks;
 
 namespace Metier
 {
-    [Serializable]
-    public class Agence
+    class Agence
     {
 
         private string nom;
         private List<Voiture> voitures;
         private List<Personne> personnes;
-
-        public List<Personne> Personnes
-        {
-            get { return personnes; }
-        }
-        public List<Voiture> Voitures
-        {
-            get { return voitures; }
-        }
 
         public string Nom
         {
@@ -54,6 +44,15 @@ namespace Metier
 
         public void RemovePersonne(Personne personne) {
             this.personnes.Remove(personne);
+        }
+
+        public List<Personne> ListePersonne() {
+            return personnes;
+        }
+
+        public List<Voiture> ListeVoiture()
+        {
+            return voiture;
         }
     }
 }

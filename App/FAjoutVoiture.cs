@@ -37,5 +37,10 @@ namespace App
                 //TODO
             }
         }
+
+        private void bt_fermer_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
