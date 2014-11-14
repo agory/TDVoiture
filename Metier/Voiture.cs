@@ -17,7 +17,6 @@ namespace Metier
 
         public string Immatriculation
         {
-            //###
             get { return immatriculation; }
             set { immatriculation = value; }
         }

@@ -7,21 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Metier;
 
 namespace App
 {
-    public partial class FAccueil : Form
+    public partial class FToutesLesVoitures : Form
     {
-        private Personne unePersonne;
-        public FAccueil()
+        public FToutesLesVoitures()
         {
             InitializeComponent();
-        }
-
-        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
