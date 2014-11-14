@@ -19,25 +19,19 @@ namespace App
         {
             InitializeComponent();
             this.agence = agence;
-            Load();
+            CreerDgv();
         }
 
-        public void Load()
-        {
-            List<String> nomsHeaderCell = new List<String>();
-            nomsHeaderCell.Add("Nom");
-            nomsHeaderCell.Add("Immatriculation");
-            nomsHeaderCell.Add("Puissance");
-            nomsHeaderCell.Add("Date de mise en service");
-            nomsHeaderCell.Add("Louée");
-
-            CreerDgv(nomsHeaderCell);
-        }
-
-        public void CreerDgv(List<String> nomsHeaderCell)
+        public void CreerDgv()
         {
             try
             {
+                List<String> nomsHeaderCell = new List<String>();
+                nomsHeaderCell.Add("Nom");
+                nomsHeaderCell.Add("Immatriculation");
+                nomsHeaderCell.Add("Puissance");
+                nomsHeaderCell.Add("Date de mise en service");
+                nomsHeaderCell.Add("Louée");
                 dgv_agence.RowHeadersWidth += 95;
                 dgv_agence.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
                 dgv_agence.RowCount = agence.Voitures.Count;
