@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bt_fermer = new System.Windows.Forms.Button();
+            this.bt_valider = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cb_personne = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // button1
+            // bt_fermer
             // 
-            this.button1.Location = new System.Drawing.Point(125, 145);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bt_fermer.Location = new System.Drawing.Point(125, 145);
+            this.bt_fermer.Name = "bt_fermer";
+            this.bt_fermer.Size = new System.Drawing.Size(75, 23);
+            this.bt_fermer.TabIndex = 0;
+            this.bt_fermer.Text = "Fermer";
+            this.bt_fermer.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // bt_valider
             // 
-            this.button2.Location = new System.Drawing.Point(246, 145);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bt_valider.Location = new System.Drawing.Point(246, 145);
+            this.bt_valider.Name = "bt_valider";
+            this.bt_valider.Size = new System.Drawing.Size(75, 23);
+            this.bt_valider.TabIndex = 1;
+            this.bt_valider.Text = "Valider";
+            this.bt_valider.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -90,8 +90,8 @@
             this.Controls.Add(this.cb_personne);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bt_valider);
+            this.Controls.Add(this.bt_fermer);
             this.Name = "FSuppPersonne";
             this.Text = "Supprimer une personne";
             this.ResumeLayout(false);
@@ -101,8 +101,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bt_fermer;
+        private System.Windows.Forms.Button bt_valider;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cb_personne;
