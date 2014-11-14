@@ -6,11 +6,22 @@ using System.Threading.Tasks;
 
 namespace Metier
 {
+    [Serializable]
     public class Agence
     {
+
         private string nom;
         private List<Voiture> voitures;
         private List<Personne> personnes;
+
+        public List<Personne> Personnes
+        {
+            get { return personnes; }
+        }
+        public List<Voiture> Voitures
+        {
+            get { return voitures; }
+        }
 
         public string Nom
         {
