@@ -34,6 +34,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.tb_voiture = new System.Windows.Forms.TextBox();
+            this.tb_date = new System.Windows.Forms.TextBox();
+            this.tb_immat = new System.Windows.Forms.TextBox();
+            this.tb_puissance = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -97,11 +102,57 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Catégorie :";
             // 
+            // tb_voiture
+            // 
+            this.tb_voiture.Location = new System.Drawing.Point(244, 66);
+            this.tb_voiture.Name = "tb_voiture";
+            this.tb_voiture.Size = new System.Drawing.Size(120, 20);
+            this.tb_voiture.TabIndex = 6;
+            // 
+            // tb_date
+            // 
+            this.tb_date.Location = new System.Drawing.Point(244, 155);
+            this.tb_date.Name = "tb_date";
+            this.tb_date.Size = new System.Drawing.Size(120, 20);
+            this.tb_date.TabIndex = 7;
+            // 
+            // tb_immat
+            // 
+            this.tb_immat.Location = new System.Drawing.Point(244, 94);
+            this.tb_immat.Name = "tb_immat";
+            this.tb_immat.Size = new System.Drawing.Size(120, 20);
+            this.tb_immat.TabIndex = 8;
+            // 
+            // tb_puissance
+            // 
+            this.tb_puissance.Location = new System.Drawing.Point(244, 126);
+            this.tb_puissance.Name = "tb_puissance";
+            this.tb_puissance.Size = new System.Drawing.Size(120, 20);
+            this.tb_puissance.TabIndex = 9;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Citadine",
+            "Coupé",
+            "Cabriolet",
+            "..."});
+            this.comboBox1.Location = new System.Drawing.Point(243, 186);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 10;
+            // 
             // FAjoutVoiture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 290);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.tb_puissance);
+            this.Controls.Add(this.tb_immat);
+            this.Controls.Add(this.tb_date);
+            this.Controls.Add(this.tb_voiture);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -123,5 +174,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tb_voiture;
+        private System.Windows.Forms.TextBox tb_date;
+        private System.Windows.Forms.TextBox tb_immat;
+        private System.Windows.Forms.TextBox tb_puissance;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
