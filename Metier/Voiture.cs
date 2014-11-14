@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Metier
 {
-    class Voiture
+    public class Voiture
     {
         private string categorie;
         private string immatriculation;
@@ -17,7 +17,6 @@ namespace Metier
 
         public string Immatriculation
         {
-            //###
             get { return immatriculation; }
             set { immatriculation = value; }
         }
