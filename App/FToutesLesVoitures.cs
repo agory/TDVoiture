@@ -40,16 +40,16 @@ namespace App
             {
                 dgv_agence.RowHeadersWidth += 95;
                 dgv_agence.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-                dgv_agence.RowCount = agence
-                dgv_agence.ColumnCount = name.Count;
-                for (int i = 0; i < dgv.ColumnCount; i++)
+                dgv_agence.RowCount = agence.Voitures.Count;
+                dgv_agence.ColumnCount = nomsHeaderCell.Count;
+                for (int i = 0; i < dgv_agence.ColumnCount; i++)
                 {
-                    dgv.Columns[i].HeaderCell.Value = name[i];
+                    dgv_agence.Columns[i].HeaderCell.Value = nomsHeaderCell[i];
                 }
 
                 for (int i = 0; i < nb; i++)
                 {
-                    dgv.Rows[i].HeaderCell.Value = text + " " + i;
+                    dgv_agence.Rows[i].HeaderCell.Value = text + " " + i;
                 }
                 RemplirDgv(nom);
             }
@@ -58,5 +58,7 @@ namespace App
                 MessageBox.Show(e.Message);
             }
         }
+
+        
     }
 }
