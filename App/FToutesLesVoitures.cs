@@ -19,44 +19,41 @@ namespace App
         {
             InitializeComponent();
             this.agence = agence;
-            Load();
+            CreerDgv();
         }
 
-        public void Load()
+        public void CreerDgv()
         {
-            List<String> nomsHeaderCell = new List<String>();
-            nomsHeaderCell.Add("Nom");
-            nomsHeaderCell.Add("Immatriculation");
-            nomsHeaderCell.Add("Puissance");
-            nomsHeaderCell.Add("Date de mise en service");
-            nomsHeaderCell.Add("Louée");
+            try
+            {
+                List<String> nomsHeaderCell = new List<String>();
+                nomsHeaderCell.Add("Nom");
+                nomsHeaderCell.Add("Immatriculation");
+                nomsHeaderCell.Add("Puissance");
+                nomsHeaderCell.Add("Date de mise en service");
+                nomsHeaderCell.Add("Louée");
+                dgv_agence.RowHeadersWidth += 95;
+                dgv_agence.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+                dgv_agence.RowCount = agence.Voitures.Count;
+                dgv_agence.ColumnCount = nomsHeaderCell.Count;
+                for (int i = 0; i < dgv_agence.ColumnCount; i++)
+                {
+                    dgv_agence.Columns[i].HeaderCell.Value = nomsHeaderCell[i];
+                }
 
-            //CreerDgv(nomsHeaderCell);
+                RemplirDgv();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
-        //public void CreerDgv(List<String> nomsHeaderCell)
-        //{
-        //    try
-        //    {
-        //        dgv_agence.RowHeadersWidth += 95;
-        //        dgv_agence.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-        //        dgv_agence.RowCount = agence
-        //        dgv_agence.ColumnCount = name.Count;
-        //        for (int i = 0; i < dgv.ColumnCount; i++)
-        //        {
-        //            dgv.Columns[i].HeaderCell.Value = name[i];
-        //        }
+        public void RemplirDgv()
+        {
 
-        //        for (int i = 0; i < nb; i++)
-        //        {
-        //            dgv.Rows[i].HeaderCell.Value = text + " " + i;
-        //        }
-        //        RemplirDgv(nom);
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        MessageBox.Show(e.Message);
-        //    }
-        //}
+        }
+
+        
     }
 }
