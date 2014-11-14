@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Metier
 {
-    class Personne
+    public class Personne
     {
         private string nom;
         private string prenom;
