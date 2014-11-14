@@ -70,7 +70,7 @@
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -121,12 +121,14 @@
             this.ajouterUneVoitureToolStripMenuItem1.Name = "ajouterUneVoitureToolStripMenuItem1";
             this.ajouterUneVoitureToolStripMenuItem1.Size = new System.Drawing.Size(204, 22);
             this.ajouterUneVoitureToolStripMenuItem1.Text = "Ajouter une personne";
+            this.ajouterUneVoitureToolStripMenuItem1.Click += new System.EventHandler(this.ajouterUneVoitureToolStripMenuItem1_Click);
             // 
             // supprimerUneVoitureToolStripMenuItem1
             // 
             this.supprimerUneVoitureToolStripMenuItem1.Name = "supprimerUneVoitureToolStripMenuItem1";
             this.supprimerUneVoitureToolStripMenuItem1.Size = new System.Drawing.Size(204, 22);
             this.supprimerUneVoitureToolStripMenuItem1.Text = "Supprimer une personne";
+            this.supprimerUneVoitureToolStripMenuItem1.Click += new System.EventHandler(this.supprimerUneVoitureToolStripMenuItem1_Click);
             // 
             // locationsToolStripMenuItem
             // 
@@ -142,12 +144,14 @@
             this.louerUneVoitureToolStripMenuItem.Name = "louerUneVoitureToolStripMenuItem";
             this.louerUneVoitureToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.louerUneVoitureToolStripMenuItem.Text = "Louer une voiture";
+            this.louerUneVoitureToolStripMenuItem.Click += new System.EventHandler(this.louerUneVoitureToolStripMenuItem_Click);
             // 
             // rendreUneVoitureToolStripMenuItem
             // 
             this.rendreUneVoitureToolStripMenuItem.Name = "rendreUneVoitureToolStripMenuItem";
             this.rendreUneVoitureToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.rendreUneVoitureToolStripMenuItem.Text = "Rendre une voiture";
+            this.rendreUneVoitureToolStripMenuItem.Click += new System.EventHandler(this.rendreUneVoitureToolStripMenuItem_Click);
             // 
             // consultationToolStripMenuItem
             // 
@@ -162,7 +166,9 @@
             // 
             this.toutesLesVoituresToolStripMenuItem.Name = "toutesLesVoituresToolStripMenuItem";
             this.toutesLesVoituresToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.toutesLesVoituresToolStripMenuItem.Text = "Toutes les voitures"; 
+            this.toutesLesVoituresToolStripMenuItem.Text = "Toutes les voitures";
+            this.toutesLesVoituresToolStripMenuItem.Click += new System.EventHandler(this.toutesLesVoituresToolStripMenuItem_Click_1);
+            // 
             // toutesLesPersonnesToolStripMenuItem
             // 
             this.toutesLesPersonnesToolStripMenuItem.Name = "toutesLesPersonnesToolStripMenuItem";
