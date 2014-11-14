@@ -22,6 +22,7 @@ namespace App
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
 
         private void ajouterUneVoitureToolStripMenuItem1_Click(object sender, EventArgs e)
         {

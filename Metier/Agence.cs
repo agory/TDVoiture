@@ -9,6 +9,7 @@ namespace Metier
     public class Agence
     {
         private string nom;
+        private int jambon;
 
         public string Nom
         {
