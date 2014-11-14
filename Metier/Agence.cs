@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Metier
 {
-    class Agence
+    public class Agence
     {
 
         private string nom;
