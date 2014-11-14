@@ -52,7 +52,7 @@ namespace Metier
 
         public List<Voiture> ListeVoiture()
         {
-            return voiture;
+            return voitures;
         }
     }
 }

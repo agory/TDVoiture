@@ -15,10 +15,10 @@ namespace App
     {
         private Voiture voiture;
 
-        public FAjoutVoiture(Voiture voiture)
+        public FAjoutVoiture(Agence voiture)
         {
             InitializeComponent();
-            this.voiture = voiture;
+            voiture = new Voiture();
             LoadCar();
         }
 
