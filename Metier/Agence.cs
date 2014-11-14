@@ -20,6 +20,6 @@ namespace Metier
         {
             this.nom = nom;
         }
-        // coucou ...
+        // coucou ... bye
     }
 }
