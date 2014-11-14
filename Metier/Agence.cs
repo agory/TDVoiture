@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Metier
 {
-    [Serializable]
-    public class Agence
+    class Agence
     {
 
         private string nom;
@@ -20,9 +19,9 @@ namespace Metier
             set { nom = value; }
         }
 
-        public Agence() { }
+        public Agence2() { }
 
-        public Agence(string nom)
+        public Agence2(string nom)
         {
             this.nom = nom;
             this.personnes = new List<Personne>();

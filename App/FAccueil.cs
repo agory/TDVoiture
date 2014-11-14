@@ -14,7 +14,7 @@ namespace App
     public partial class FAccueil : Form
     {
         private Personne unePersonne;
-        private Agence agence;
+        private Agence2 agence;
 
         public FAccueil()
         {
@@ -28,7 +28,7 @@ namespace App
 
         private void toutesLesVoituresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            agence = new Agence();
+            agence = new Agence2();
         }
 
         private void ajouterUneVoitureToolStripMenuItem_Click(object sender, EventArgs e)
