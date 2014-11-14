@@ -34,5 +34,13 @@ namespace Metier
         {
             this.voitures.Add(voiture);
         }
+
+        public void RemoveVoiture(Voiture voiture) {
+            this.voitures.Remove(voiture);
+        }
+
+        public void RemovePersonne(Personne personne) {
+            this.personnes.Remove(personne);
+        }
     }
 }
