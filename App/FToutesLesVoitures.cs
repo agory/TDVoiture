@@ -47,16 +47,17 @@ namespace App
                     dgv_agence.Columns[i].HeaderCell.Value = nomsHeaderCell[i];
                 }
 
-                for (int i = 0; i < nb; i++)
-                {
-                    dgv_agence.Rows[i].HeaderCell.Value = text + " " + i;
-                }
-                RemplirDgv(nom);
+                RemplirDgv();
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
+        }
+
+        public void RemplirDgv()
+        {
+
         }
 
         
