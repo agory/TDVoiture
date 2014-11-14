@@ -15,10 +15,12 @@ namespace App
     {
         private Personne unePersonne;
         private Agence agence;
+        private Voiture voiture;
 
         public FAccueil()
         {
             InitializeComponent();
+            
         }
 
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -33,7 +35,7 @@ namespace App
 
         private void ajouterUneVoitureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FAjoutVoiture unAjoutV = new FAjoutVoiture();
+            FAjoutVoiture unAjoutV = new FAjoutVoiture(voiture);
             unAjoutV.ShowDialog();
         }
 
