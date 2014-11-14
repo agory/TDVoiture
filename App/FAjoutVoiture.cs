@@ -13,12 +13,13 @@ namespace App
 {
     public partial class FAjoutVoiture : Form
     {
+        private Agence agence;
         private Voiture voiture;
 
-        public FAjoutVoiture(Voiture voiture)
+        public FAjoutVoiture(Agence agence)
         {
             InitializeComponent();
-            this.voiture = voiture;
+            voiture = new Voiture();
             LoadCar();
         }
 
@@ -40,7 +41,7 @@ namespace App
 
         private void bt_fermer_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }

@@ -34,7 +34,7 @@ namespace App
                 nomsHeaderCell.Add("Louée");
                 dgv_agence.RowHeadersWidth += 95;
                 dgv_agence.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-                dgv_agence.RowCount = agence.Voitures.Count;
+                dgv_agence.RowCount = agence.ListeVoiture().Count;
                 dgv_agence.ColumnCount = nomsHeaderCell.Count;
                 for (int i = 0; i < dgv_agence.ColumnCount; i++)
                 {
