@@ -9,7 +9,8 @@ namespace Metier
     public class Agence
     {
         private string nom;
-        private int jambon;
+        private List<Voiture> voitures;
+        private List<Personne> personnes;
 
         public string Nom
         {
@@ -17,10 +18,31 @@ namespace Metier
             set { nom = value; }
         }
 
+        public Agence() { }
+
         public Agence(string nom)
         {
             this.nom = nom;
+            this.personnes = new List<Personne>();
+            this.voitures = new List<Voiture>();
         }
-        // coucou ...
+
+        public void AddPersonne(Personne personne) {
+            this.personnes.Add(personne); 
+        }
+
+        
+        public void AddVoiture(Voiture voiture)
+        {
+            this.voitures.Add(voiture);
+        }
+
+        public void RemoveVoiture(Voiture voiture) {
+            this.voitures.Remove(voiture);
+        }
+
+        public void RemovePersonne(Personne personne) {
+            this.personnes.Remove(personne);
+        }
     }
 }
