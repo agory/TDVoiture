@@ -72,6 +72,7 @@
             this.bt_fermer.TabIndex = 3;
             this.bt_fermer.Text = "Fermer";
             this.bt_fermer.UseVisualStyleBackColor = true;
+            this.bt_fermer.Click += new System.EventHandler(this.bt_fermer_Click);
             // 
             // bt_supp
             // 

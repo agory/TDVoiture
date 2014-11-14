@@ -31,32 +31,32 @@ namespace App
             nomsHeaderCell.Add("Date de mise en service");
             nomsHeaderCell.Add("Louée");
 
-            CreerDgv(nomsHeaderCell);
+            //CreerDgv(nomsHeaderCell);
         }
 
-        public void CreerDgv(List<String> nomsHeaderCell)
-        {
-            try
-            {
-                dgv_agence.RowHeadersWidth += 95;
-                dgv_agence.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-                dgv_agence.RowCount = agence
-                dgv_agence.ColumnCount = name.Count;
-                for (int i = 0; i < dgv.ColumnCount; i++)
-                {
-                    dgv.Columns[i].HeaderCell.Value = name[i];
-                }
+        //public void CreerDgv(List<String> nomsHeaderCell)
+        //{
+        //    try
+        //    {
+        //        dgv_agence.RowHeadersWidth += 95;
+        //        dgv_agence.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+        //        dgv_agence.RowCount = agence
+        //        dgv_agence.ColumnCount = name.Count;
+        //        for (int i = 0; i < dgv.ColumnCount; i++)
+        //        {
+        //            dgv.Columns[i].HeaderCell.Value = name[i];
+        //        }
 
-                for (int i = 0; i < nb; i++)
-                {
-                    dgv.Rows[i].HeaderCell.Value = text + " " + i;
-                }
-                RemplirDgv(nom);
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-        }
+        //        for (int i = 0; i < nb; i++)
+        //        {
+        //            dgv.Rows[i].HeaderCell.Value = text + " " + i;
+        //        }
+        //        RemplirDgv(nom);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        MessageBox.Show(e.Message);
+        //    }
+        //}
     }
 }

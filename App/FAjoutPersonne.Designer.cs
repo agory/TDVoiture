@@ -47,6 +47,7 @@
             this.bt_close.TabIndex = 0;
             this.bt_close.Text = "Fermer";
             this.bt_close.UseVisualStyleBackColor = true;
+            this.bt_close.Click += new System.EventHandler(this.bt_close_Click);
             // 
             // bt_valid
             // 
