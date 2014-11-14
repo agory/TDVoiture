@@ -34,7 +34,7 @@ namespace App
 
         private void ajouterUneVoitureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FAjoutVoiture unAjoutV = new FAjoutVoiture(Agence agence);
+            FAjoutVoiture unAjoutV = new FAjoutVoiture(agence);
             unAjoutV.ShowDialog();
         }
 
