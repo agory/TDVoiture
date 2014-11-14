@@ -14,6 +14,8 @@ namespace App
     public partial class FAccueil : Form
     {
         private Personne unePersonne;
+        private Agence agence;
+
         public FAccueil()
         {
             InitializeComponent();
@@ -22,6 +24,11 @@ namespace App
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void toutesLesVoituresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            agence = new Agence();
         }
     }
 }

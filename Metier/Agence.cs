@@ -29,6 +29,8 @@ namespace Metier
             set { nom = value; }
         }
 
+        public Agence() { }
+
         public Agence(string nom)
         {
             this.nom = nom;

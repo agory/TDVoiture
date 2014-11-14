@@ -7,14 +7,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Metier;
 
 namespace App
 {
     public partial class FToutesLesVoitures : Form
     {
-        public FToutesLesVoitures()
+        private Agence agence;
+
+        public FToutesLesVoitures(Agence agence)
         {
             InitializeComponent();
+            this.agence = agence;
+            Load();
+        }
+
+        public void Load()
+        {
+            List<String> nomsHeaderCell = new List<String>();
+            nomsHeaderCell.Add("Nom");
+            nomsHeaderCell.Add("Immatriculation");
+            nomsHeaderCell.Add("Puissance");
+            nomsHeaderCell.Add("Date de mise en service");
+            nomsHeaderCell.Add("Louée");
+
+            CreerDgv(nomsHeaderCell);
+        }
+
+        public void CreerDgv(List<String> nomsHeaderCell)
+        {
+            try
+            {
+                dgv_agence.RowHeadersWidth += 95;
+                dgv_agence.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+                dgv_agence.RowCount = agence
+                dgv_agence.ColumnCount = name.Count;
+                for (int i = 0; i < dgv.ColumnCount; i++)
+                {
+                    dgv.Columns[i].HeaderCell.Value = name[i];
+                }
+
+                for (int i = 0; i < nb; i++)
+                {
+                    dgv.Rows[i].HeaderCell.Value = text + " " + i;
+                }
+                RemplirDgv(nom);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }
