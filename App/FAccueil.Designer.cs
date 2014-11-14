@@ -119,7 +119,6 @@
             this.ajouterUneVoitureToolStripMenuItem1.Name = "ajouterUneVoitureToolStripMenuItem1";
             this.ajouterUneVoitureToolStripMenuItem1.Size = new System.Drawing.Size(204, 22);
             this.ajouterUneVoitureToolStripMenuItem1.Text = "Ajouter une personne";
-            this.ajouterUneVoitureToolStripMenuItem1.Click += new System.EventHandler(this.ajouterUneVoitureToolStripMenuItem1_Click);
             // 
             // supprimerUneVoitureToolStripMenuItem1
             // 
@@ -162,7 +161,6 @@
             this.toutesLesVoituresToolStripMenuItem.Name = "toutesLesVoituresToolStripMenuItem";
             this.toutesLesVoituresToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.toutesLesVoituresToolStripMenuItem.Text = "Toutes les voitures";
-            this.toutesLesVoituresToolStripMenuItem.Click += new System.EventHandler(this.toutesLesVoituresToolStripMenuItem_Click);
             // 
             // toutesLesPersonnesToolStripMenuItem
             // 
