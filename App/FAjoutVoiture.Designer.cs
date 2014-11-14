@@ -38,7 +38,7 @@
             this.tb_date = new System.Windows.Forms.TextBox();
             this.tb_immat = new System.Windows.Forms.TextBox();
             this.tb_puissance = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbx_categorie = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -130,25 +130,25 @@
             this.tb_puissance.Size = new System.Drawing.Size(120, 20);
             this.tb_puissance.TabIndex = 9;
             // 
-            // comboBox1
+            // cbx_categorie
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbx_categorie.FormattingEnabled = true;
+            this.cbx_categorie.Items.AddRange(new object[] {
             "Citadine",
             "Coupé",
             "Cabriolet",
             "..."});
-            this.comboBox1.Location = new System.Drawing.Point(243, 186);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 10;
+            this.cbx_categorie.Location = new System.Drawing.Point(243, 186);
+            this.cbx_categorie.Name = "cbx_categorie";
+            this.cbx_categorie.Size = new System.Drawing.Size(121, 21);
+            this.cbx_categorie.TabIndex = 10;
             // 
             // FAjoutVoiture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 290);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbx_categorie);
             this.Controls.Add(this.tb_puissance);
             this.Controls.Add(this.tb_immat);
             this.Controls.Add(this.tb_date);
@@ -178,6 +178,6 @@
         private System.Windows.Forms.TextBox tb_date;
         private System.Windows.Forms.TextBox tb_immat;
         private System.Windows.Forms.TextBox tb_puissance;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbx_categorie;
     }
 }
