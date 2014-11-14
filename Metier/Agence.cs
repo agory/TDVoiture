@@ -14,15 +14,6 @@ namespace Metier
         private List<Voiture> voitures;
         private List<Personne> personnes;
 
-        public List<Personne> Personnes
-        {
-            get { return personnes; }
-        }
-        public List<Voiture> Voitures
-        {
-            get { return voitures; }
-        }
-
         public string Nom
         {
             get { return nom; }
@@ -54,6 +45,15 @@ namespace Metier
 
         public void RemovePersonne(Personne personne) {
             this.personnes.Remove(personne);
+        }
+
+        public List<Personne> ListePersonne() {
+            return personnes;
+        }
+
+        public List<Voiture> ListeVoiture()
+        {
+            return voiture;
         }
     }
 }
