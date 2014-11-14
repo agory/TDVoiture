@@ -8,7 +8,6 @@ namespace Metier
 {
     public class Agence
     {
-        private int yala;
         private string nom;
 
         public string Nom
