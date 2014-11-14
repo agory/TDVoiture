@@ -30,5 +30,16 @@ namespace App
         {
             agence = new Agence();
         }
+
+        private void ajouterUneVoitureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FAjoutVoiture unAjoutV = new FAjoutVoiture();
+            unAjoutV.ShowDialog();
+        }
+
+        private void supprimerUneVoitureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
