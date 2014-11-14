@@ -19,9 +19,9 @@ namespace Metier
             set { nom = value; }
         }
 
-        public Agence2() { }
+        public Agence() { }
 
-        public Agence2(string nom)
+        public Agence(string nom)
         {
             this.nom = nom;
             this.personnes = new List<Personne>();
