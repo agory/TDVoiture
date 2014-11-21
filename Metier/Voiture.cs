@@ -72,11 +72,10 @@ namespace Metier
         {
 
         }
-        public Voiture(string categorie, string immatriculation, string loueur, string nom, int puissance, DateTime dateMiseService)
+        public Voiture(string categorie, string immatriculation, string nom, int puissance, DateTime dateMiseService)
         {
             this.categorie = categorie;
             this.immatriculation = immatriculation;
-            this.loueur = loueur;
             this.nom = nom;
             this.puissance = puissance;
             this.dateMiseService = dateMiseService;
