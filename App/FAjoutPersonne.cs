@@ -13,16 +13,42 @@ namespace App
 {
     public partial class FAjoutPersonne : Form
     {
-        private Agence agence;
         private Personne personne;
+        private Agence agence;
+
         public FAjoutPersonne(Agence agence)
         {
             InitializeComponent();
             this.agence = agence;
+            personne = new Personne();
+
+        }
+        public void LoadPersonne()
+        {
+            try
+            {
+                personne.Nom = tb_nom.Text;
+                personne.Prenom = tb_prenom.Text;
+                personne.Ville = tb_ville.Text;
+
+
+                agence.AddPersonne(personne);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
         }
 
         private void bt_close_Click(object sender, EventArgs e)
         {
+            Close();
+        }
+
+        private void bt_valid_Click(object sender, EventArgs e)
+        {
+            LoadPersonne();
             Close();
         }
     }
