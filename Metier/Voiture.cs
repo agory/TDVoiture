@@ -8,12 +8,33 @@ namespace Metier
 {
     public class Voiture
     {
+
+        #region Propriétés privés de la classe
+
         private string categorie;
         private string immatriculation;
-        private string loueur;
         private string nom;
         private int puissance;
         private DateTime dateMiseService;
+        private bool estLouee;
+        private Personne loueur;
+
+        #endregion
+
+        #region Accesseur mutateur
+
+        public Personne Loueur
+        {
+            get { return loueur; }
+            set { loueur = value; }
+        }
+
+
+        public bool EstLouee
+        {
+            get { return estLouee; }
+            set { estLouee = value; }
+        }
 
         public string Immatriculation
         {
@@ -36,24 +57,17 @@ namespace Metier
             get { return dateMiseService; }
             set { dateMiseService = value; }
         }
-        private bool estLoue;
 
-        public string Loueur
-        {
-            get { return loueur; }
-            set { loueur = value; }
-        }
         public string Categorie
         {
             get { return categorie; }
             set { categorie = value; }
         }
 
-        public bool EstLoue
-        {
-            get { return estLoue; }
-            set { estLoue = value; }
-        }
+        #endregion
+
+        #region Constructeur init
+
         public Voiture()
         {
 
@@ -67,5 +81,13 @@ namespace Metier
             this.puissance = puissance;
             this.dateMiseService = dateMiseService;
         }
+
+        #endregion
+
+        #region Méthode
+        #endregion
+        
+
+        
     }
 }
