@@ -75,7 +75,8 @@ namespace App
 
         private void toutesLesVoituresToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-          
+            FToutesLesVoitures toutesVoitures = new FToutesLesVoitures(agence);
+            toutesVoitures.ShowDialog();
         }
 
         #region Sérialisation / Désérialisation Binaire
