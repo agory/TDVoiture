@@ -59,7 +59,7 @@ namespace App
                 dgv_agence.Rows[i].Cells[1].Value = voiture.Immatriculation.ToString();
                 dgv_agence.Rows[i].Cells[2].Value = voiture.Puissance.ToString();
                 dgv_agence.Rows[i].Cells[3].Value = voiture.DateMiseService.ToString();
-                dgv_agence.Rows[i].Cells[j].Value = voiture.Nom.ToString();
+                dgv_agence.Rows[i].Cells[4].Value = voiture.Nom.ToString();
                 i++;
             }
         }

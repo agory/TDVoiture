@@ -57,6 +57,7 @@
             this.bt_valid.TabIndex = 1;
             this.bt_valid.Text = "Valider";
             this.bt_valid.UseVisualStyleBackColor = true;
+            this.bt_valid.Click += new System.EventHandler(this.bt_valid_Click);
             // 
             // label1
             // 
