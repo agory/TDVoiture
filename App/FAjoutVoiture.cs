@@ -21,6 +21,10 @@ namespace App
             InitializeComponent();
             this.agence = agence;
             voiture = new Voiture();
+        }
+
+        private void bt_ajout_Click(object sender, EventArgs e)
+        {
             LoadCar();
         }
 
@@ -28,14 +32,18 @@ namespace App
         {
             try
             {
-                voiture.Categorie = cbx_categorie.SelectedValue.ToString();
+                voiture.Categorie = cbx_categorie.Text;
                 voiture.DateMiseService = Convert.ToDateTime(tb_date.Text);
                 voiture.Immatriculation = tb_immat.Text;
                 voiture.Nom = tb_voiture.Text;
                 voiture.Puissance = Convert.ToInt32(tb_puissance.Text);
+
+                this.agence.AddVoiture(voiture);
+                this.Close();
             }
             catch(Exception e)
             {
+                MessageBox.Show(e.Message);
                 //TODO
             }
         }
