@@ -14,16 +14,24 @@ namespace Metier
         private string nom;
         private int puissance;
         private DateTime dateMiseService;
+        private bool estLoue;
+
+        public string Categorie
+        {
+            get { return categorie; }
+            set { categorie = value; }
+        }
 
         public string Immatriculation
         {
             get { return immatriculation; }
             set { immatriculation = value; }
         }
-        public int Puissance
+
+        public string Loueur
         {
-            get { return puissance; }
-            set { puissance = value; }
+            get { return loueur; }
+            set { loueur = value; }
         }
         public string Nom
         {
@@ -31,22 +39,15 @@ namespace Metier
             set { nom = value; }
         }
 
+        public int Puissance
+        {
+            get { return puissance; }
+            set { puissance = value; }
+        }
         public DateTime DateMiseService
         {
             get { return dateMiseService; }
             set { dateMiseService = value; }
-        }
-        private bool estLoue;
-
-        public string Loueur
-        {
-            get { return loueur; }
-            set { loueur = value; }
-        }
-        public string Categorie
-        {
-            get { return categorie; }
-            set { categorie = value; }
         }
 
         public bool EstLoue
@@ -54,10 +55,9 @@ namespace Metier
             get { return estLoue; }
             set { estLoue = value; }
         }
-        public Voiture()
-        {
+       
+        public Voiture(){}
 
-        }
         public Voiture(string categorie, string immatriculation, string loueur, string nom, int puissance, DateTime dateMiseService)
         {
             this.categorie = categorie;
