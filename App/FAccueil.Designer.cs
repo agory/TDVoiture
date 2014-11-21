@@ -83,7 +83,7 @@
             // 
             this.quitterToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quitterToolStripMenuItem.Image")));
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -104,7 +104,7 @@
             this.supprimerUneVoitureToolStripMenuItem});
             this.voituresToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("voituresToolStripMenuItem.Image")));
             this.voituresToolStripMenuItem.Name = "voituresToolStripMenuItem";
-            this.voituresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.voituresToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.voituresToolStripMenuItem.Text = "Voitures";
             // 
             // ajouterUneVoitureToolStripMenuItem
@@ -130,7 +130,7 @@
             this.supprimerUneVoitureToolStripMenuItem1});
             this.personnesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("personnesToolStripMenuItem.Image")));
             this.personnesToolStripMenuItem.Name = "personnesToolStripMenuItem";
-            this.personnesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.personnesToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.personnesToolStripMenuItem.Text = "Personnes";
             // 
             // ajouterUneVoitureToolStripMenuItem1
@@ -156,7 +156,7 @@
             this.rendreUneVoitureToolStripMenuItem});
             this.locationsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("locationsToolStripMenuItem.Image")));
             this.locationsToolStripMenuItem.Name = "locationsToolStripMenuItem";
-            this.locationsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.locationsToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.locationsToolStripMenuItem.Text = "Locations";
             // 
             // louerUneVoitureToolStripMenuItem
