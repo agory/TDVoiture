@@ -45,6 +45,10 @@
             this.consultationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toutesLesVoituresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toutesLesPersonnesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importerBinaireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exporterBinaireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exporterXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importerXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -74,6 +78,10 @@
             // fichierToolStripMenuItem
             // 
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importerXMLToolStripMenuItem,
+            this.exporterXMLToolStripMenuItem,
+            this.importerBinaireToolStripMenuItem,
+            this.exporterBinaireToolStripMenuItem,
             this.quitterToolStripMenuItem});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
@@ -283,6 +291,34 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Téléphone :\r\n04 74 99 99 99\r\nMail :\r\na3p@automobile.fr";
             // 
+            // importerBinaireToolStripMenuItem
+            // 
+            this.importerBinaireToolStripMenuItem.Name = "importerBinaireToolStripMenuItem";
+            this.importerBinaireToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.importerBinaireToolStripMenuItem.Text = "ImporterBinaire";
+            this.importerBinaireToolStripMenuItem.Click += new System.EventHandler(this.importerBinaireToolStripMenuItem_Click);
+            // 
+            // exporterBinaireToolStripMenuItem
+            // 
+            this.exporterBinaireToolStripMenuItem.Name = "exporterBinaireToolStripMenuItem";
+            this.exporterBinaireToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.exporterBinaireToolStripMenuItem.Text = "ExporterBinaire";
+            this.exporterBinaireToolStripMenuItem.Click += new System.EventHandler(this.exporterBinaireToolStripMenuItem_Click);
+            // 
+            // exporterXMLToolStripMenuItem
+            // 
+            this.exporterXMLToolStripMenuItem.Name = "exporterXMLToolStripMenuItem";
+            this.exporterXMLToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.exporterXMLToolStripMenuItem.Text = "ExporterXML";
+            this.exporterXMLToolStripMenuItem.Click += new System.EventHandler(this.exporterXMLToolStripMenuItem_Click);
+            // 
+            // importerXMLToolStripMenuItem
+            // 
+            this.importerXMLToolStripMenuItem.Name = "importerXMLToolStripMenuItem";
+            this.importerXMLToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.importerXMLToolStripMenuItem.Text = "ImporterXML";
+            this.importerXMLToolStripMenuItem.Click += new System.EventHandler(this.importerXMLToolStripMenuItem_Click);
+            // 
             // FAccueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,6 +363,10 @@
         private System.Windows.Forms.ToolStripMenuItem toutesLesVoituresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toutesLesPersonnesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importerBinaireToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exporterBinaireToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importerXMLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exporterXMLToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

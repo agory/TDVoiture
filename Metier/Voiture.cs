@@ -8,18 +8,32 @@ namespace Metier
 {
     public class Voiture
     {
+
+        #region Propriétés privés de la classe
+
         private string categorie;
         private string immatriculation;
-        private string loueur;
         private string nom;
         private int puissance;
         private DateTime dateMiseService;
-        private bool estLoue;
+        private bool estLouee;
+        private Personne loueur;
 
-        public string Categorie
+        #endregion
+
+        #region Accesseur mutateur
+
+        public Personne Loueur
         {
-            get { return categorie; }
-            set { categorie = value; }
+            get { return loueur; }
+            set { loueur = value; }
+        }
+
+
+        public bool EstLouee
+        {
+            get { return estLouee; }
+            set { estLouee = value; }
         }
 
         public string Immatriculation
@@ -27,11 +41,10 @@ namespace Metier
             get { return immatriculation; }
             set { immatriculation = value; }
         }
-
-        public string Loueur
+        public int Puissance
         {
-            get { return loueur; }
-            set { loueur = value; }
+            get { return puissance; }
+            set { puissance = value; }
         }
         public string Nom
         {
@@ -39,33 +52,41 @@ namespace Metier
             set { nom = value; }
         }
 
-        public int Puissance
-        {
-            get { return puissance; }
-            set { puissance = value; }
-        }
         public DateTime DateMiseService
         {
             get { return dateMiseService; }
             set { dateMiseService = value; }
         }
 
-        public bool EstLoue
+        public string Categorie
         {
-            get { return estLoue; }
-            set { estLoue = value; }
+            get { return categorie; }
+            set { categorie = value; }
         }
-       
-        public Voiture(){}
 
-        public Voiture(string categorie, string immatriculation, string loueur, string nom, int puissance, DateTime dateMiseService)
+        #endregion
+
+        #region Constructeur init
+
+        public Voiture()
+        {
+
+        }
+        public Voiture(string categorie, string immatriculation, string nom, int puissance, DateTime dateMiseService)
         {
             this.categorie = categorie;
             this.immatriculation = immatriculation;
-            this.loueur = loueur;
             this.nom = nom;
             this.puissance = puissance;
             this.dateMiseService = dateMiseService;
         }
+
+        #endregion
+
+        #region Méthode
+        #endregion
+        
+
+        
     }
 }

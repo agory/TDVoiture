@@ -8,9 +8,15 @@ namespace Metier
 {
     public class Personne
     {
+        #region Propriétés privés de la classe
+
         private string nom;
         private string prenom;
         private string ville;
+
+        #endregion
+
+        #region Accesseur mutateur
 
         public string Nom
         {
@@ -29,12 +35,28 @@ namespace Metier
             set { ville = value; }
         }
 
+        #endregion
+
+        #region Constructeur init
+
         public Personne() { }
-        public Personne(string nom, string prenom, string ville) {
+        public Personne(string nom, string prenom, string ville)
+        {
             this.nom = nom;
-            this.prenom = prenom; 
+            this.prenom = prenom;
             this.ville = ville;
         }
+
+        #endregion
+
+        #region Méthode
+        #endregion
+
+        
+
+        
+
+        
 
     }
 }
