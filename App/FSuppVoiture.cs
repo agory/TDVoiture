@@ -18,10 +18,28 @@ namespace App
         {
             InitializeComponent();
             this.agence = agence;
+            List<Voiture> voitures = agence.ListeVoiture();
+            foreach(Voiture voiture in voitures){
+                cb_voiture.Items.Add(voiture);
+            }
         }
 
         private void bt_fermer_Click(object sender, EventArgs e)
         {
+            Close();
+        }
+
+        private void bt_supp_Click(object sender, EventArgs e)
+        {
+            if (cb_voiture.SelectedItem == "")
+            {
+
+            }
+            else
+            {
+                cb_voiture.Items.Remove("");
+            }
+
             Close();
         }
     }

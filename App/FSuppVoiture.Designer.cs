@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_voiture = new System.Windows.Forms.ComboBox();
             this.bt_fermer = new System.Windows.Forms.Button();
             this.bt_supp = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -56,13 +56,13 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Voiture :";
             // 
-            // comboBox1
+            // cb_voiture
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(183, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(147, 21);
-            this.comboBox1.TabIndex = 2;
+            this.cb_voiture.FormattingEnabled = true;
+            this.cb_voiture.Location = new System.Drawing.Point(183, 65);
+            this.cb_voiture.Name = "cb_voiture";
+            this.cb_voiture.Size = new System.Drawing.Size(147, 21);
+            this.cb_voiture.TabIndex = 2;
             // 
             // bt_fermer
             // 
@@ -82,6 +82,7 @@
             this.bt_supp.TabIndex = 4;
             this.bt_supp.Text = "Supprimer";
             this.bt_supp.UseVisualStyleBackColor = true;
+            this.bt_supp.Click += new System.EventHandler(this.bt_supp_Click);
             // 
             // FSuppVoiture
             // 
@@ -90,7 +91,7 @@
             this.ClientSize = new System.Drawing.Size(410, 166);
             this.Controls.Add(this.bt_supp);
             this.Controls.Add(this.bt_fermer);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cb_voiture);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FSuppVoiture";
@@ -104,7 +105,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_voiture;
         private System.Windows.Forms.Button bt_fermer;
         private System.Windows.Forms.Button bt_supp;
     }
