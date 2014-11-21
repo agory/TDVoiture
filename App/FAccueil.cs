@@ -73,6 +73,5 @@ namespace App
             FToutesLesVoitures toutesVoitures = new FToutesLesVoitures(agence);
             toutesVoitures.ShowDialog();
         }
-
     }
 }
