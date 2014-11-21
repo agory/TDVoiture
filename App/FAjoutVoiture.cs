@@ -13,7 +13,6 @@ namespace App
 {
     public partial class FAjoutVoiture : Form
     {
-        private Agence agence;
         private Voiture voiture;
         private Agence agence;
 

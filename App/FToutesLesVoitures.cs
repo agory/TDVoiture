@@ -54,6 +54,11 @@ namespace App
 
         }
 
+        private void bt_fermer_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         
     }
 }

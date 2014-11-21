@@ -19,7 +19,7 @@ namespace App
 
         private void bt_close_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
     }
 }
