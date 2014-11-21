@@ -29,12 +29,13 @@ namespace App
 
         private void toutesLesVoituresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            FToutesLesVoitures toutesVoit = new FToutesLesVoitures(agence);
+            toutesVoit.ShowDialog();
         }
 
         private void ajouterUneVoitureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FAjoutVoiture unAjoutV = new FAjoutVoiture(Agence agence);
+            FAjoutVoiture unAjoutV = new FAjoutVoiture(agence);
             unAjoutV.ShowDialog();
         }
 

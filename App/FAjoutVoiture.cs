@@ -14,10 +14,12 @@ namespace App
     public partial class FAjoutVoiture : Form
     {
         private Voiture voiture;
+        private Agence agence;
 
-        public FAjoutVoiture(Agence voiture)
+        public FAjoutVoiture(Agence agence)
         {
             InitializeComponent();
+            this.agence = agence;
             voiture = new Voiture();
             LoadCar();
         }
