@@ -163,6 +163,7 @@
             this.bt_ajout.TabIndex = 12;
             this.bt_ajout.Text = "Ajouter";
             this.bt_ajout.UseVisualStyleBackColor = true;
+            this.bt_ajout.Click += new System.EventHandler(this.bt_ajout_Click);
             // 
             // FAjoutVoiture
             // 

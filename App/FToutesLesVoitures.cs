@@ -51,7 +51,17 @@ namespace App
 
         public void RemplirDgv()
         {
-
+            List<Voiture> mesVoitures = this.agence.ListeVoiture();
+            int i = 0;
+            foreach(Voiture voiture in mesVoitures)
+            {
+                dgv_agence.Rows[i].Cells[0].Value = voiture.Nom.ToString();
+                dgv_agence.Rows[i].Cells[1].Value = voiture.Immatriculation.ToString();
+                dgv_agence.Rows[i].Cells[2].Value = voiture.Puissance.ToString();
+                dgv_agence.Rows[i].Cells[3].Value = voiture.DateMiseService.ToString();
+                dgv_agence.Rows[i].Cells[j].Value = voiture.Nom.ToString();
+                i++;
+            }
         }
 
         private void bt_fermer_Click(object sender, EventArgs e)
