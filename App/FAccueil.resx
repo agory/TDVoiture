@@ -186,7 +186,7 @@
   <data name="supprimerUneVoitureToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAABTAAAAUwAWWqyrYAAAAGYktHRAD/AP8A/6C9p5MAAAAJdnBBZwAAACAAAAAgAIf6
+        YQUAAAAJcEhZcwAABS4AAAUuAYg3loIAAAAGYktHRAD/AP8A/6C9p5MAAAAJdnBBZwAAACAAAAAgAIf6
         nJ0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMDktMDktMTVUMDk6MDY6MjErMDI6MDCoDcK+AAAAJXRFWHRk
         YXRlOm1vZGlmeQAyMDA5LTA5LTE1VDA5OjA2OjIxKzAyOjAw2VB6AgAAABl0RVh0U29mdHdhcmUAd3d3
         Lmlua3NjYXBlLm9yZ5vuPBoAAAbOSURBVFhH7Zd7UJTXGcbPLpLlokAVxUtAFkFClIsRluWygCvBCUZE
@@ -268,7 +268,7 @@
         XTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriXeW/h/sYH6AdFD6UeVjxS
         fNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2dmnafvvF05dOJZ+nPFmYKf5X+
         tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/MF72Rf3P4LeNt37vwd5MLWe+x7ys/
-        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEgAACxIB0t1+/AAAA7FJREFUWEfFk+lLVFEY
+        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEAAACxABrSO9dQAAA7FJREFUWEfFk+lLVFEY
         xodoI1o/lErYgi1EkB9MjLDIVqk+BFkRSAR9iupfCIT6BxwMgj6177RgWllZaTaOlUuZOWnLNC6z6Tgz
         TnfUns5z9dzuzL2DWqkXfp77Lud9njn3aAEwoZgmxxPT5HhimhxPTJOS23OmnRHgH+EMzjJADYOoRDRY
         X584hq7efgQiA+gRhJQBhJVf6I3+UlfGzLPOPl+oD16BOxhFZ08U7YEoKo8fowmrXlhCHYMwEcXDjzas
@@ -321,7 +321,7 @@
   <data name="supprimerUneVoitureToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAABTAAAAUwAWWqyrYAAAAGYktHRAD/AP8A/6C9p5MAAAAJdnBBZwAAACAAAAAgAIf6
+        YQUAAAAJcEhZcwAABS4AAAUuAYg3loIAAAAGYktHRAD/AP8A/6C9p5MAAAAJdnBBZwAAACAAAAAgAIf6
         nJ0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMDktMDktMTVUMDk6MDY6MjErMDI6MDCoDcK+AAAAJXRFWHRk
         YXRlOm1vZGlmeQAyMDA5LTA5LTE1VDA5OjA2OjIxKzAyOjAw2VB6AgAAABl0RVh0U29mdHdhcmUAd3d3
         Lmlua3NjYXBlLm9yZ5vuPBoAAAbOSURBVFhH7Zd7UJTXGcbPLpLlokAVxUtAFkFClIsRluWygCvBCUZE
@@ -359,7 +359,7 @@
   <data name="personnesToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAABTAAAAUwAWWqyrYAAAAGYktHRAD/AP8A/6C9p5MAAAAJdnBBZwAAACAAAAAgAIf6
+        YQUAAAAJcEhZcwAABS4AAAUuAYg3loIAAAAGYktHRAD/AP8A/6C9p5MAAAAJdnBBZwAAACAAAAAgAIf6
         nJ0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMDktMDktMTNUMTY6NDI6MzArMDI6MDCSDEfLAAAAJXRFWHRk
         YXRlOm1vZGlmeQAyMDA5LTA5LTEzVDE2OjQyOjMwKzAyOjAw41H/dwAAABl0RVh0U29mdHdhcmUAd3d3
         Lmlua3NjYXBlLm9yZ5vuPBoAAAg3SURBVFhHtVUJcFPXFX3ESaChaZIpBJoUSAiNPaEhgQAGT9mSEEIL
@@ -3571,7 +3571,7 @@
 connaître la "liberté des routes" ?
 Nous sommes là pour vous aider ! 
 Chez A3P, retrouver les plus grands
-modèles de voiture, quel soit sportive, 
+modèles de voiture, qu'elle soit sportive, 
 luxueuse, touriste, citadine et bien plus... 
 ayez le choix, mais surtout profiter de 
 la QUALITE !</value>
