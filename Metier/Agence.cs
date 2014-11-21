@@ -9,7 +9,7 @@ using System.Runtime.Serialization;
 namespace Metier
 {
     /// <summary>
-    /// Classe Agence
+    /// Classe Agence cool
     /// </summary>
     [DataContract]
     [Serializable]
