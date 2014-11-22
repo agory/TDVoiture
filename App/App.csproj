@@ -87,6 +87,12 @@
     <Compile Include="FSuppVoiture.Designer.cs">
       <DependentUpon>FSuppVoiture.cs</DependentUpon>
     </Compile>
+    <Compile Include="FToutesLesPersonnes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FToutesLesPersonnes.Designer.cs">
+      <DependentUpon>FToutesLesPersonnes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FToutesLesVoitures.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FSuppVoiture.resx">
       <DependentUpon>FSuppVoiture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FToutesLesPersonnes.resx">
+      <DependentUpon>FToutesLesPersonnes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FToutesLesVoitures.resx">
       <DependentUpon>FToutesLesVoitures.cs</DependentUpon>

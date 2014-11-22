@@ -22,7 +22,7 @@ namespace App
             CreerDgv();
         }
 
-        public void CreerDgv()
+        private void CreerDgv()
         {
             try
             {
@@ -49,11 +49,11 @@ namespace App
             }
         }
 
-        public void RemplirDgv()
+        private void RemplirDgv()
         {
-            List<Voiture> mesVoitures = this.agence.ListeVoiture();
+            List<Voiture> voitures = this.agence.ListeVoiture();
             int i = 0;
-            foreach(Voiture voiture in mesVoitures)
+            foreach (Voiture voiture in voitures)
             {
                 dgv_agence.Rows[i].Cells[0].Value = voiture.Nom.ToString();
                 dgv_agence.Rows[i].Cells[1].Value = voiture.Immatriculation.ToString();

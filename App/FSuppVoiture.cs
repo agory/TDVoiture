@@ -31,7 +31,7 @@ namespace App
 
         private void bt_supp_Click(object sender, EventArgs e)
         {
-            if (cb_voiture.SelectedItem == "")
+            if (cb_voiture.SelectedItem.ToString() == "")
             {
 
             }

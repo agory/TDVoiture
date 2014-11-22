@@ -272,6 +272,12 @@ namespace App
         }
         #endregion
 
+        private void toutesLesPersonnesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FToutesLesPersonnes toutesPersonnes = new FToutesLesPersonnes(agence);
+            toutesPersonnes.ShowDialog();
+        }
+
     }
        
 
