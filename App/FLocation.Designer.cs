@@ -39,7 +39,7 @@
             // 
             // bt_close
             // 
-            this.bt_close.Location = new System.Drawing.Point(95, 165);
+            this.bt_close.Location = new System.Drawing.Point(134, 165);
             this.bt_close.Name = "bt_close";
             this.bt_close.Size = new System.Drawing.Size(75, 23);
             this.bt_close.TabIndex = 0;
@@ -49,19 +49,20 @@
             // 
             // bt_valid
             // 
-            this.bt_valid.Location = new System.Drawing.Point(218, 165);
+            this.bt_valid.Location = new System.Drawing.Point(286, 165);
             this.bt_valid.Name = "bt_valid";
             this.bt_valid.Size = new System.Drawing.Size(75, 23);
             this.bt_valid.TabIndex = 1;
             this.bt_valid.Text = "Valider";
             this.bt_valid.UseVisualStyleBackColor = true;
+            this.bt_valid.Click += new System.EventHandler(this.bt_valid_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(96, 16);
+            this.label1.Location = new System.Drawing.Point(119, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(232, 25);
             this.label1.TabIndex = 2;
@@ -89,25 +90,27 @@
             // 
             // cb_voiture
             // 
+            this.cb_voiture.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_voiture.FormattingEnabled = true;
             this.cb_voiture.Location = new System.Drawing.Point(172, 64);
             this.cb_voiture.Name = "cb_voiture";
-            this.cb_voiture.Size = new System.Drawing.Size(121, 21);
+            this.cb_voiture.Size = new System.Drawing.Size(189, 21);
             this.cb_voiture.TabIndex = 5;
             // 
             // cb_personne
             // 
+            this.cb_personne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_personne.FormattingEnabled = true;
             this.cb_personne.Location = new System.Drawing.Point(172, 104);
             this.cb_personne.Name = "cb_personne";
-            this.cb_personne.Size = new System.Drawing.Size(121, 21);
+            this.cb_personne.Size = new System.Drawing.Size(189, 21);
             this.cb_personne.TabIndex = 6;
             // 
             // FLocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 205);
+            this.ClientSize = new System.Drawing.Size(471, 206);
             this.Controls.Add(this.cb_personne);
             this.Controls.Add(this.cb_voiture);
             this.Controls.Add(this.label3);

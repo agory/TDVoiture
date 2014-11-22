@@ -134,6 +134,7 @@
             // 
             // cbx_categorie
             // 
+            this.cbx_categorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_categorie.FormattingEnabled = true;
             this.cbx_categorie.Items.AddRange(new object[] {
             "Citadine",

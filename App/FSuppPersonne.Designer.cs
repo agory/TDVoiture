@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.bt_fermer = new System.Windows.Forms.Button();
-            this.bt_valider = new System.Windows.Forms.Button();
+            this.bt_supp = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cb_personne = new System.Windows.Forms.ComboBox();
@@ -45,14 +45,15 @@
             this.bt_fermer.UseVisualStyleBackColor = true;
             this.bt_fermer.Click += new System.EventHandler(this.bt_fermer_Click);
             // 
-            // bt_valider
+            // bt_supp
             // 
-            this.bt_valider.Location = new System.Drawing.Point(246, 145);
-            this.bt_valider.Name = "bt_valider";
-            this.bt_valider.Size = new System.Drawing.Size(75, 23);
-            this.bt_valider.TabIndex = 1;
-            this.bt_valider.Text = "Valider";
-            this.bt_valider.UseVisualStyleBackColor = true;
+            this.bt_supp.Location = new System.Drawing.Point(246, 145);
+            this.bt_supp.Name = "bt_supp";
+            this.bt_supp.Size = new System.Drawing.Size(75, 23);
+            this.bt_supp.TabIndex = 1;
+            this.bt_supp.Text = "Supprimer";
+            this.bt_supp.UseVisualStyleBackColor = true;
+            this.bt_supp.Click += new System.EventHandler(this.bt_supp_Click);
             // 
             // label1
             // 
@@ -77,6 +78,7 @@
             // 
             // cb_personne
             // 
+            this.cb_personne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_personne.FormattingEnabled = true;
             this.cb_personne.Location = new System.Drawing.Point(173, 76);
             this.cb_personne.Name = "cb_personne";
@@ -91,7 +93,7 @@
             this.Controls.Add(this.cb_personne);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bt_valider);
+            this.Controls.Add(this.bt_supp);
             this.Controls.Add(this.bt_fermer);
             this.Name = "FSuppPersonne";
             this.Text = "Supprimer une personne";
@@ -103,7 +105,7 @@
         #endregion
 
         private System.Windows.Forms.Button bt_fermer;
-        private System.Windows.Forms.Button bt_valider;
+        private System.Windows.Forms.Button bt_supp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cb_personne;

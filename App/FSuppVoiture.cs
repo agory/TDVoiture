@@ -14,14 +14,16 @@ namespace App
     public partial class FSuppVoiture : Form
     {
         private Agence agence;
+        private List<Voiture> voitures;
         public FSuppVoiture(Agence agence)
         {
             InitializeComponent();
             this.agence = agence;
-            List<Voiture> voitures = agence.ListeVoiture();
+            voitures = agence.ListeVoiture();
             foreach(Voiture voiture in voitures){
-                cb_voiture.Items.Add(voiture);
+                cb_voiture.Items.Add(voiture.Nom + " - "+voiture.Immatriculation);
             }
+            cb_voiture.SelectedIndex = 0;
         }
 
         private void bt_fermer_Click(object sender, EventArgs e)
@@ -31,13 +33,22 @@ namespace App
 
         private void bt_supp_Click(object sender, EventArgs e)
         {
-            if (cb_voiture.SelectedItem.ToString() == "")
+            //Try permettant de tester si la suppression d'un véhicule de l'agence est possible
+            try
             {
+                foreach(Voiture voiture in voitures)
+                {
+                    if (cb_voiture.SelectedItem.ToString() == voiture.Nom + " - " + voiture.Immatriculation)
+                    {
+                        agence.RemoveVoiture(voiture);
 
+                        MessageBox.Show("La " + voiture.Nom + " ayant l'immatriculation " + voiture.Immatriculation + " a été supprimée de l'agence");
+                    }
+                }
             }
-            else
+            catch(Exception ex)
             {
-                cb_voiture.Items.Remove("");
+                MessageBox.Show(ex.Message);
             }
 
             Close();

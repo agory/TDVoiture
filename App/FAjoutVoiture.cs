@@ -21,6 +21,7 @@ namespace App
             InitializeComponent();
             this.agence = agence;
             voiture = new Voiture();
+            cbx_categorie.SelectedIndex = 0;
         }
 
         private void bt_ajout_Click(object sender, EventArgs e)
@@ -32,14 +33,21 @@ namespace App
         {
             try
             {
-                voiture.Categorie = cbx_categorie.Text;
-                voiture.DateMiseService = Convert.ToDateTime(tb_date.Text);
-                voiture.Immatriculation = tb_immat.Text;
-                voiture.Nom = tb_voiture.Text;
-                voiture.Puissance = Convert.ToInt32(tb_puissance.Text);
+                if(tb_voiture.Text == "" || tb_puissance.Text  == "" || tb_immat.Text  == "" || tb_date.Text  == "" || tb_immat.Text  == "")
+                {
+                    MessageBox.Show("Veuillez remplir tous les champs.");
+                }
+                else
+                {
+                    voiture.Categorie = cbx_categorie.Text;
+                    voiture.DateMiseService = Convert.ToDateTime(tb_date.Text);
+                    voiture.Immatriculation = tb_immat.Text;
+                    voiture.Nom = tb_voiture.Text;
+                    voiture.Puissance = Convert.ToInt32(tb_puissance.Text);
 
-                this.agence.AddVoiture(voiture);
-                this.Close();
+                    this.agence.AddVoiture(voiture);
+                    this.Close();
+                }
             }
             catch(Exception e)
             {

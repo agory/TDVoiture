@@ -18,7 +18,7 @@ namespace App
 {
     public partial class FAccueil : Form
     {
-        private Agence agence;
+        protected Agence agence;
 
         public FAccueil()
         {
@@ -31,53 +31,190 @@ namespace App
             Application.Exit();
         }
 
-        private void toutesLesVoituresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FToutesLesVoitures toutesVoit = new FToutesLesVoitures(agence);
-            toutesVoit.ShowDialog();
-        }
-
-        private void ajouterUneVoitureToolStripMenuItem_Click(object sender, EventArgs e)
+        #region Voiture
+        private void ajouterUneVoiture_Click(object sender, EventArgs e)
         {
             FAjoutVoiture unAjoutV = new FAjoutVoiture(agence);
             unAjoutV.ShowDialog();
         }
 
-        private void supprimerUneVoitureToolStripMenuItem_Click(object sender, EventArgs e)
+        private void supprimerUneVoiture_Click(object sender, EventArgs e)
         {
-            FSuppVoiture uneSuppV = new FSuppVoiture(agence);
-            uneSuppV.ShowDialog();
-        }
 
-        private void ajouterUneVoitureToolStripMenuItem1_Click(object sender, EventArgs e)
+
+            if (testVoiture())
+            {
+                FSuppVoiture uneSuppV = new FSuppVoiture(agence);
+                uneSuppV.ShowDialog();
+            }
+            else
+            {
+                erreur("voiture");
+            }
+        }
+        private void toutesLesVoitures_Click(object sender, EventArgs e)
         {
+            if (testVoiture())
+            {
+                FToutesLesVoitures toutesVoit = new FToutesLesVoitures(agence);
+                toutesVoit.ShowDialog();
+            }
+            else
+            {
+                erreur("voiture");
+            }
+        }
+        #endregion
+
+        #region Personne
+        private void ajouterUnePersonne_Click(object sender, EventArgs e)
+        {
+
             FAjoutPersonne unAjoutP = new FAjoutPersonne(agence);
             unAjoutP.ShowDialog();
         }
 
-        private void supprimerUneVoitureToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void supprimerUnePersonne_Click(object sender, EventArgs e)
         {
-            FSuppPersonne uneSuppP = new FSuppPersonne(agence);
-            uneSuppP.ShowDialog();
+            if (testPersonne())
+            {
+                FSuppPersonne uneSuppP = new FSuppPersonne(agence);
+                uneSuppP.ShowDialog();
+            }
+            else
+            {
+                erreur("personne");
+            }
+        }
+        private void toutesLesPersonnes_Click(object sender, EventArgs e)
+        {
+            if (testPersonne())
+            {
+                FToutesLesPersonnes toutesPersonnes = new FToutesLesPersonnes(agence);
+                toutesPersonnes.ShowDialog();
+            }
+            else
+            {
+                erreur("personne");
+            }
+        }
+        #endregion Personne
+
+        #region Location
+        private void louerUneVoiture_Click(object sender, EventArgs e)
+        {
+            if (testVoiture())
+            {
+                if(testPersonne())
+                { 
+                    if(testToutesVoituresLouees())
+                    {
+                        FLocation uneLocation = new FLocation(agence);
+                        uneLocation.ShowDialog();
+                    }
+                    else
+                    {
+                        erreur("");
+                    }
+                }
+                else
+                {
+                    erreur("personne");
+                }
+            }
+            else
+            {
+                erreur("voiture");
+            }
         }
 
-        private void louerUneVoitureToolStripMenuItem_Click(object sender, EventArgs e)
+        private void rendreUneVoiture_Click(object sender, EventArgs e)
         {
-            FLocation uneLocation = new FLocation(agence);
-            uneLocation.ShowDialog();
+            if (testVoiture())
+            {
+                if(testPersonne())
+                {
+                    if(testVoitureLouee())
+                    {
+                        FRestitution unerestitution = new FRestitution(agence);
+                        unerestitution.ShowDialog();
+                    }
+                    else
+                    {
+                        erreur("voiture louée");
+                    }
+                }
+                else
+                {
+                    erreur("personne");
+                }
+            }
+            else
+            {
+                erreur("voiture");
+            }
         }
 
-        private void rendreUneVoitureToolStripMenuItem_Click(object sender, EventArgs e)
+        #endregion
+        
+        #region Test
+
+        private bool testVoiture()
         {
-            FRestitution uneRestitution = new FRestitution(agence);
-            uneRestitution.ShowDialog();
+            if (agence.ListeVoiture().Count != 0)
+                return true;
+            else
+                return false;
         }
 
-        private void toutesLesVoituresToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private bool testPersonne()
         {
-            FToutesLesVoitures toutesVoitures = new FToutesLesVoitures(agence);
-            toutesVoitures.ShowDialog();
+            if (agence.ListePersonne().Count != 0)
+                return true;
+            else
+                return false;
         }
+
+        /// <summary>
+        /// Fonction permettant de déterminer si au moins une voiture est louée
+        /// </summary>
+        private bool testVoitureLouee()
+        {
+            List<Voiture> voitures = agence.ListeVoiture();
+            foreach(Voiture voiture in voitures)
+            {
+                if (voiture.EstLouee)
+                    return true;
+            }
+            return false;
+        }
+
+        private bool testToutesVoituresLouees()
+        {
+            List<Voiture> voitures = agence.ListeVoiture();
+            foreach (Voiture voiture in voitures)
+            {
+                if (!voiture.EstLouee)
+                    return true;
+            }
+            return false;
+        }
+
+        private void erreur(string classe)
+        {
+            string message = "";
+            if(classe == "")
+            {
+                message += "Toutes les voitures sont louées. Veuillez revenir plus tard :)";
+            }
+            else
+            {
+                message += "L'agence ne contient pas de " + classe;
+            }
+            MessageBox.Show(message);
+        }
+
+        #endregion
 
         #region Sérialisation / Désérialisation Binaire
         /// <summary>
@@ -271,12 +408,6 @@ namespace App
             }
         }
         #endregion
-
-        private void toutesLesPersonnesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FToutesLesPersonnes toutesPersonnes = new FToutesLesPersonnes(agence);
-            toutesPersonnes.ShowDialog();
-        }
 
     }
        

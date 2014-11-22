@@ -58,6 +58,7 @@
             // 
             // cb_voiture
             // 
+            this.cb_voiture.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_voiture.FormattingEnabled = true;
             this.cb_voiture.Location = new System.Drawing.Point(183, 65);
             this.cb_voiture.Name = "cb_voiture";

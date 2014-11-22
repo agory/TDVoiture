@@ -71,14 +71,17 @@
             // 
             // cbx_personne
             // 
+            this.cbx_personne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_personne.FormattingEnabled = true;
             this.cbx_personne.Location = new System.Drawing.Point(185, 50);
             this.cbx_personne.Name = "cbx_personne";
             this.cbx_personne.Size = new System.Drawing.Size(121, 21);
             this.cbx_personne.TabIndex = 3;
+            this.cbx_personne.SelectedIndexChanged += new System.EventHandler(this.cbx_personne_SelectedIndexChanged);
             // 
             // cbx_trie
             // 
+            this.cbx_trie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_trie.FormattingEnabled = true;
             this.cbx_trie.Location = new System.Drawing.Point(574, 50);
             this.cbx_trie.Name = "cbx_trie";

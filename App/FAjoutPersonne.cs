@@ -27,12 +27,19 @@ namespace App
         {
             try
             {
-                personne.Nom = tb_nom.Text;
-                personne.Prenom = tb_prenom.Text;
-                personne.Ville = tb_ville.Text;
+                if(tb_nom.Text == "" || tb_prenom.Text == "" || tb_ville.Text == "")
+                {
+                    MessageBox.Show("Veuillez remplir tous les champs.");
+                }
+                else
+                {
+                    personne.Nom = tb_nom.Text;
+                    personne.Prenom = tb_prenom.Text;
+                    personne.Ville = tb_ville.Text;
 
-
-                agence.AddPersonne(personne);
+                    agence.AddPersonne(personne);
+                    Close();
+                }
             }
             catch (Exception e)
             {
@@ -49,7 +56,6 @@ namespace App
         private void bt_valid_Click(object sender, EventArgs e)
         {
             LoadPersonne();
-            Close();
         }
     }
 }
