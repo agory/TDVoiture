@@ -87,6 +87,7 @@
             this.cbx_trie.Name = "cbx_trie";
             this.cbx_trie.Size = new System.Drawing.Size(121, 21);
             this.cbx_trie.TabIndex = 4;
+            this.cbx_trie.SelectedIndexChanged += new System.EventHandler(this.cbx_trie_SelectedIndexChanged);
             // 
             // dgv_agence
             // 

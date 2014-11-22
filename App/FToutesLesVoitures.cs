@@ -24,6 +24,18 @@ namespace App
             voitures = agence.ListeVoiture();
             personnes = agence.ListePersonne();
 
+            string listeCateg = "";
+            cbx_trie.Items.Add("Tout");
+
+            foreach(Voiture voiture in voitures)
+            {
+                if (!listeCateg.Contains(voiture.Categorie))
+                {
+                    listeCateg += voiture.Categorie;
+                    cbx_trie.Items.Add(voiture.Categorie);
+                }
+            }
+
             CreerDgv();
         }
 
@@ -46,6 +58,7 @@ namespace App
                 }
 
 
+                cbx_trie.SelectedIndex = 0;
                 cbx_personne.Items.Add("AGENCE A3P");
                 cbx_personne.SelectedIndex = 0;
 
@@ -70,13 +83,16 @@ namespace App
             dgv_agence.RowCount = agence.ListeVoiture().Count;
             int i = 0;
             foreach (Voiture voiture in voitures)
-            { 
-                dgv_agence.Rows[i].Cells[0].Value = voiture.Nom.ToString();
-                dgv_agence.Rows[i].Cells[1].Value = voiture.Immatriculation.ToString();
-                dgv_agence.Rows[i].Cells[2].Value = voiture.Puissance.ToString();
-                dgv_agence.Rows[i].Cells[3].Value = voiture.DateMiseService.ToString();
-                dgv_agence.Rows[i].Cells[4].Value = voiture.EstLouee ? "Oui" : "Non";
-                i++;
+            {
+                if (voiture.Categorie == cbx_trie.SelectedItem.ToString())
+                { 
+                    dgv_agence.Rows[i].Cells[0].Value = voiture.Nom.ToString();
+                    dgv_agence.Rows[i].Cells[1].Value = voiture.Immatriculation.ToString();
+                    dgv_agence.Rows[i].Cells[2].Value = voiture.Puissance.ToString();
+                    dgv_agence.Rows[i].Cells[3].Value = voiture.DateMiseService.ToString();
+                    dgv_agence.Rows[i].Cells[4].Value = voiture.EstLouee ? "Oui" : "Non";
+                    i++;
+                }
             }
         }
 
@@ -89,9 +105,10 @@ namespace App
                 if (cbx_personne.SelectedItem.ToString() == voiture.Loueur.Nom + " " + voiture.Loueur.Prenom)
                 {
                     voituresPersonnnes.Add(voiture);
+                    MessageBox.Show("A");
                 }
             }
-
+            MessageBox.Show(voituresPersonnnes.Count.ToString());
             dgv_agence.RowCount = voituresPersonnnes.Count;
             int i = 0;
             foreach (Voiture voiture in voituresPersonnnes)
@@ -113,6 +130,7 @@ namespace App
         private void cbx_personne_SelectedIndexChanged(object sender, EventArgs e)
         {
             RemiseAZero();
+
             if (cbx_personne.SelectedItem.ToString() == "AGENCE A3P")
             {
                 RemplirDgvVoiture();
@@ -126,6 +144,13 @@ namespace App
         private void RemiseAZero()
         {
             dgv_agence.Rows.Clear();
+        }
+
+        private void cbx_trie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RemiseAZero();
+
+            RemplirDgvVoiture();
         }
         
     }

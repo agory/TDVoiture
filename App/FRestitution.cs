@@ -20,15 +20,31 @@ namespace App
             InitializeComponent();
             lbl_loueur.Hide();
             this.agence = agence;
-            List<Voiture> voitures = agence.ListeVoiture();
 
-            foreach(Voiture voiture in voitures)
+            LoadComboBox();
+        }
+
+        private void LoadComboBox()
+        {
+            cb_rendreVoiture.Items.Clear();
+            List<Voiture> voitures = agence.ListeVoiture();
+            voituresLouees.Clear();
+
+            foreach (Voiture voiture in voitures)
             {
                 if (voiture.EstLouee)
                 {
                     voituresLouees.Add(voiture);
-                    cb_rendreVoiture.Items.Add(voiture.Nom + " - " +voiture.Immatriculation);
+                    cb_rendreVoiture.Items.Add(voiture.Nom + " - " + voiture.Immatriculation);
                 }
+            }
+            if (voituresLouees.Count == 0)
+            {
+                Close();
+            }
+            else
+            {
+                cb_rendreVoiture.SelectedIndex = 0;
             }
         }
 
@@ -44,7 +60,8 @@ namespace App
                 if (voiture.Nom + " - " + voiture.Immatriculation == cb_rendreVoiture.SelectedItem.ToString())
                 {
                     agence.RendreVoiture(voiture);
-                    Close();
+                    LoadComboBox();
+                    break;
                 }
             }
         }

@@ -19,13 +19,24 @@ namespace App
         {
             InitializeComponent();
             this.agence = agence;
-            personnes = agence.ListePersonne();
 
+            LoadPersonne();
+        }
+
+        private void LoadPersonne()
+        {
+            cb_personne.Items.Clear();
+            personnes = agence.ListePersonne();
             foreach (Personne personne in personnes)
             {
                 cb_personne.Items.Add(personne.Nom + " " + personne.Prenom + " - " + personne.Ville);
             }
-            cb_personne.SelectedIndex = 0;
+            if (personnes.Count == 0)
+                Close();
+            else
+            {
+                cb_personne.SelectedIndex = 0;
+            }
         }
 
         private void bt_fermer_Click(object sender, EventArgs e)
@@ -35,25 +46,25 @@ namespace App
 
         private void bt_supp_Click(object sender, EventArgs e)
         {
-            //Try permettant de tester si la suppression d'une personne de l'agence est possible
-            try
+            foreach (Personne personne in personnes)
             {
-                foreach (Personne personne in personnes)
+                //Try permettant de tester si la suppression d'une personne de l'agence est possible
+                try
                 {
                     //string[] split = cb_personne.SelectedItem.ToString().Split(new String[] { " ", " - " }, StringSplitOptions.RemoveEmptyEntries);
-
                     if (cb_personne.SelectedItem.ToString() == personne.Nom + " " + personne.Prenom + " - " + personne.Ville)
                     {
                         agence.RemovePersonne(personne);
+                        LoadPersonne();
+                        break;
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            Close();
         }
+
     }
 }
