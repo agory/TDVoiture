@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Metier
 {
+    [Serializable]
     public class Personne
     {
         #region Propriétés privés de la classe
