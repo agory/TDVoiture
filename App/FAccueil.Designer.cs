@@ -89,6 +89,7 @@
             // 
             // importerXMLToolStripMenuItem
             // 
+            this.importerXMLToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("importerXMLToolStripMenuItem.Image")));
             this.importerXMLToolStripMenuItem.Name = "importerXMLToolStripMenuItem";
             this.importerXMLToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.importerXMLToolStripMenuItem.Text = "ImporterXML";
@@ -96,6 +97,7 @@
             // 
             // exporterXMLToolStripMenuItem
             // 
+            this.exporterXMLToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exporterXMLToolStripMenuItem.Image")));
             this.exporterXMLToolStripMenuItem.Name = "exporterXMLToolStripMenuItem";
             this.exporterXMLToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.exporterXMLToolStripMenuItem.Text = "ExporterXML";
@@ -103,6 +105,7 @@
             // 
             // importerBinaireToolStripMenuItem
             // 
+            this.importerBinaireToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("importerBinaireToolStripMenuItem.Image")));
             this.importerBinaireToolStripMenuItem.Name = "importerBinaireToolStripMenuItem";
             this.importerBinaireToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.importerBinaireToolStripMenuItem.Text = "ImporterBinaire";
@@ -110,6 +113,7 @@
             // 
             // exporterBinaireToolStripMenuItem
             // 
+            this.exporterBinaireToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exporterBinaireToolStripMenuItem.Image")));
             this.exporterBinaireToolStripMenuItem.Name = "exporterBinaireToolStripMenuItem";
             this.exporterBinaireToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.exporterBinaireToolStripMenuItem.Text = "ExporterBinaire";
@@ -117,6 +121,7 @@
             // 
             // quitterToolStripMenuItem
             // 
+            this.quitterToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quitterToolStripMenuItem.Image")));
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
             this.quitterToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.quitterToolStripMenuItem.Text = "Quitter";
