@@ -102,7 +102,7 @@ namespace App
 
             foreach (Voiture voiture in voitures)
             {
-                if (cbx_personne.SelectedItem.ToString() == voiture.Loueur.Nom + " " + voiture.Loueur.Prenom)
+                if (cbx_personne.SelectedItem.ToString() == voiture.getNameLoueur())
                 {
                     voituresPersonnnes.Add(voiture);
                     MessageBox.Show("A");

@@ -85,6 +85,17 @@ namespace Metier
         #endregion
 
         #region Méthode
+
+        public string getNameLoueur() {
+            string name = null;
+
+            if (loueur != null) {
+                name = loueur.Nom + " " + loueur.Prenom;
+            }
+            
+            return name;
+        }
+
         #endregion
         
 
