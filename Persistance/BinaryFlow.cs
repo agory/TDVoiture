@@ -20,11 +20,8 @@ namespace Persistance
             FileStream unFlux = null;
             try
             {
-
-                
                 BinaryFormatter fs;
                 //On ouvre un flux binaire
-                Directory.SetCurrentDirectory(chemin);
                 unFlux = new FileStream(chemin, FileMode.Open);
                 //On formate le flux en binaire
                 fs = new BinaryFormatter();
@@ -54,7 +51,6 @@ namespace Persistance
                 //On formate le flux en binaire
                 fs = new BinaryFormatter();
                 fs.Serialize(unFlux, agence);
-                //S'il n'y a pas eu d'erreurs on affiche un message qui en informe l'utilisateur
             }
             catch (Exception ex)
             {

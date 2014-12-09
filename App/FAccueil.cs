@@ -225,7 +225,7 @@ namespace App
         /// <param name="e">e</param>
         private void importerBinaireToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string chemin = Explorer();
+            string chemin = Explorer("ci");
             try
             {
                 //On ouvre un flux binaire
@@ -248,7 +248,7 @@ namespace App
         /// <param name="e">e</param>
         private void exporterBinaireToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string chemin = Explorer();
+            string chemin = Explorer("ci");
             try
             {
                 BinaryFlow bf = new BinaryFlow(chemin);
@@ -276,7 +276,7 @@ namespace App
         /// <param name="e">e</param>
         private void importerXMLToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string chemin = Explorer();
+            string chemin = Explorer("xml");
             if (File.Exists(chemin))
             {
                 try
@@ -301,7 +301,7 @@ namespace App
         /// <param name="e">e</param>
         private void exporterXMLToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string chemin = Explorer();
+            string chemin = Explorer("xml");
             if (File.Exists(chemin))
             {
                 try
@@ -320,12 +320,12 @@ namespace App
         }
 
         #endregion
-        private string Explorer()
+        private string Explorer(string type)
         {
             string chemin = "";
             OpenFileDialog fileDialogXML = new OpenFileDialog();
             fileDialogXML.Title = "Choisissez un fichier";
-            fileDialogXML.Filter = "Fichiers XML (*.xml) | *.xml";
+            fileDialogXML.Filter = "Fichiers XML (*."+type+") | *." +type;
             DialogResult result = fileDialogXML.ShowDialog();
             if (result == DialogResult.OK)
             {
