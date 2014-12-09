@@ -155,6 +155,10 @@
       <Project>{bb637e2e-c7b2-44a1-b852-2334c37cedda}</Project>
       <Name>Metier</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Persistance\Persistance.csproj">
+      <Project>{2a2ae9f1-a3da-4cdf-a5f7-4f61c9ef6836}</Project>
+      <Name>Persistance</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
