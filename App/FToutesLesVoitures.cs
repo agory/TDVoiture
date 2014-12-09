@@ -23,7 +23,6 @@ namespace App
             this.agence = agence;
             voitures = agence.ListeVoiture();
             personnes = agence.ListePersonne();
-
             string listeCateg = "";
             cbx_trie.Items.Add("Tout");
 
@@ -37,6 +36,7 @@ namespace App
             }
 
             CreerDgv();
+             RemplirDgvPersonneVoiture();
         }
 
         private void CreerDgv()
@@ -59,7 +59,7 @@ namespace App
 
 
                 cbx_trie.SelectedIndex = 0;
-                cbx_personne.Items.Add("AGENCE A3P");
+                cbx_personne.Items.Add("Tout");
                 cbx_personne.SelectedIndex = 0;
 
                 RemplirDgvPersonne();
@@ -85,7 +85,7 @@ namespace App
             foreach (Voiture voiture in voitures)
             {
                 if (voiture.Categorie == cbx_trie.SelectedItem.ToString())
-                { 
+                {
                     dgv_agence.Rows[i].Cells[0].Value = voiture.Nom.ToString();
                     dgv_agence.Rows[i].Cells[1].Value = voiture.Immatriculation.ToString();
                     dgv_agence.Rows[i].Cells[2].Value = voiture.Puissance.ToString();
@@ -95,30 +95,40 @@ namespace App
                 }
             }
         }
-
-        private void RemplirDgvPersonneVoiture()
-        {
-            List<Voiture> voituresPersonnnes = new List<Voiture>();
+        private List<Voiture> TriVoiture() {
+            List<Voiture> voituresDGV = new List<Voiture>();
 
             foreach (Voiture voiture in voitures)
             {
-                if (cbx_personne.SelectedItem.ToString() == voiture.getNameLoueur())
+                if ((cbx_personne.Text == voiture.getNameLoueur()
+                    || cbx_personne.Text == "Tout")
+                    &&
+                    (cbx_trie.Text == voiture.Categorie
+                    || cbx_trie.Text == "Tout"))
                 {
-                    voituresPersonnnes.Add(voiture);
-                    MessageBox.Show("A");
+                    voituresDGV.Add(voiture);
                 }
             }
-            MessageBox.Show(voituresPersonnnes.Count.ToString());
-            dgv_agence.RowCount = voituresPersonnnes.Count;
-            int i = 0;
-            foreach (Voiture voiture in voituresPersonnnes)
+
+            return voituresDGV;
+        }
+
+        private void RemplirDgvPersonneVoiture()
+        {
+            List<Voiture> voituresDGV = TriVoiture();
+            if (voituresDGV.Count > 0)
             {
-                dgv_agence.Rows[i].Cells[0].Value = voiture.Nom.ToString();
-                dgv_agence.Rows[i].Cells[1].Value = voiture.Immatriculation.ToString();
-                dgv_agence.Rows[i].Cells[2].Value = voiture.Puissance.ToString();
-                dgv_agence.Rows[i].Cells[3].Value = voiture.DateMiseService.ToString();
-                dgv_agence.Rows[i].Cells[4].Value = voiture.EstLouee ? "Oui" : "Non";
-                i++;
+                dgv_agence.RowCount = voituresDGV.Count;
+                int i = 0;
+                foreach (Voiture voiture in voituresDGV)
+                {
+                    dgv_agence.Rows[i].Cells[0].Value = voiture.Nom.ToString();
+                    dgv_agence.Rows[i].Cells[1].Value = voiture.Immatriculation.ToString();
+                    dgv_agence.Rows[i].Cells[2].Value = voiture.Puissance.ToString();
+                    dgv_agence.Rows[i].Cells[3].Value = voiture.DateMiseService.ToString();
+                    dgv_agence.Rows[i].Cells[4].Value = voiture.EstLouee ? "Oui" : "Non";
+                    i++;
+                }
             }
         }
 
@@ -130,15 +140,7 @@ namespace App
         private void cbx_personne_SelectedIndexChanged(object sender, EventArgs e)
         {
             RemiseAZero();
-
-            if (cbx_personne.SelectedItem.ToString() == "AGENCE A3P")
-            {
-                RemplirDgvVoiture();
-            }
-            else
-            {
-                RemplirDgvPersonneVoiture();
-            }
+            RemplirDgvPersonneVoiture();
         }
 
         private void RemiseAZero()
@@ -149,8 +151,7 @@ namespace App
         private void cbx_trie_SelectedIndexChanged(object sender, EventArgs e)
         {
             RemiseAZero();
-
-            RemplirDgvVoiture();
+            RemplirDgvPersonneVoiture();
         }
         
     }
